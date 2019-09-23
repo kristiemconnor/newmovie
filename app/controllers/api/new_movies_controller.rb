@@ -1,5 +1,5 @@
 class Api::NewMoviesController < ApplicationController
-  before_action :authenticate_user, only: [:index]
+  # before_action :authenticate_user, only: [:index]
   def index
     @movies = Movie.all
     render 'index.json.jb'
