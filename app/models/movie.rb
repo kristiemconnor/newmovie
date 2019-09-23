@@ -17,6 +17,7 @@ class Movie < ApplicationRecord
     return genre_names
   end
 
-  validates :title, :director, :year, presence: true
+  validates :title, :director, :year, :plot, presence: true
+  validates :plot, length: { minimum: 10, maximum: 1000 }
   validates :year, numericality: { less_than: 2020, greater_than: 1800 }
 end
