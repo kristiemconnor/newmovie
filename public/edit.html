@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <title>Edit Actor</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(108, 187, 193);
+      border: 4px navy;
+      border-style: ;
+      border-width: thin;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      padding-left: 220px;
+      padding-right: 15px;
+      text-align: center;
+      font-style: normal;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+      font-size: 55px;
+    }
+
+    p1 {
+      font-size: 25px;
+    }
+
+    /* unvisited link */
+    a:link {
+      color: white;
+    }
+
+    /* visited link */
+    a:visited {
+      color: #dccfcf;
+    }
+
+    /* mouse over link */
+    a:hover {
+      color: hotpink;
+    }
+  </style>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <a class="navbar-brand" href="#">Actors</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <br />
+    <br />
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputFirstName">First name</label>
+          <input type="firstName" class="form-control" id="inputFirstName" placeholder="First name" />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLastName">Last name</label>
+          <input type="lastName" class="form-control" id="inputLastName" placeholder="Last name" />
+        </div>
+      </div>
+      <div class="form-group col-md-12">
+        <label for="knownFor">Movies for which they are known</label>
+        <input type="text" class="form-control" id="knownFor" placeholder="Titanic, Gone With The Wind, THX1138..." />
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputFavColor">Favorite Color</label>
+          <input type="text" class="form-control" id="inputCity" placeholder="Orange" />
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="inputAge">Age</label>
+          <input type="text" class="form-control" id="inputAge" placeholder="?" />
+        </div>
+      </div>
+         <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" />
+          <label class="form-check-label" for="gridCheck">
+            Actor is living
+          </label>
+        </div>
+
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" />
+          <label class="form-check-label" for="gridCheck">
+            Confirm update
+          </label>
+        </div>
+      </div>
+     
+        <a class="btn btn-info" href="/api/movies/edit.html" role="button" title="Submit">Clear form</a>
+
+      <a class="btn btn-info" href="#" role="button" title="Submit">Submit</a>
+    </form>
+  </body>
+</html>
+
+       
