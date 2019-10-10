@@ -1,2 +1,110 @@
-{ id: actor.id, first_name: actor.first_name, last_name: actor.last_name, known_for: actor.known_for, gender:
-actor.gender, age: actor.age, movie_plot: actor.movie.plot }
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Actors Index</title>
+  </head>
+  <style>
+    img {
+      border-radius: 8px;
+    }
+    p.card-text {
+      
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <a class="navbar-brand" href="#">Actors</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">
+            Home
+            <span class="sr-only">(current)</span>
+          </a>
+          <a class="nav-item nav-link" href="#">Add Actor</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Featured Actors</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card-deck">
+        <div class="card">
+          <img
+            src="https://amp.businessinsider.com/images/5ab40719a042511d008b4992-750-563.jpg"
+            class="card-img-top"
+            alt="Responsive image"
+            title="Bill"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Bill Murray</h5>
+            <p class="card-text">Known for: Quick Change, Groundhog's Day, Lost in Translation</p>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-danger" href="#" role="button" title="Click!">More Info</a>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://www.biography.com/.image/t_share/MTE4MDAzNDEwNzkxOTI1MjYy/scarlett-johansson-13671719-1-402.jpg"
+            class="card-img-top"
+            alt="Responsive image"
+            title="Scar"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Scarlett Johansson</h5>
+            <p class="card-text">Known for: Ghost World, Avengers, Lost in Translation</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a class="btn btn-info" href="#" role="button" title="Click!">More Info</a>
+            </small>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BMjE0MDkzMDQwOF5BMl5BanBnXkFtZTgwOTE1Mjg1MzE@._V1_.jpg"
+            class="card-img-top"
+            alt="Responsive image"
+            title="Ben"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Benedict Cumberbatch</h5>
+            <p class="card-text">Known for: Avengers, Sherlock, Black Mass</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">
+              <a class="btn btn-secondary" href="#" role="button" title="Click!">More Info</a>
+            </small>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <a href="http://www.google.com" title="Use Google and do your own research.">Learn More</a>
+    </div>
+  </body>
+</html>
