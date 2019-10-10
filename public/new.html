@@ -1,16 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js" defer></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <meta charset="UTF-8" />
     <title>Add Actor</title>
   </head>
+  <style>
+    body {
+      background-color: rgb(108, 187, 193);
+      border: 4px navy;
+      border-style: ;
+      border-width: thin;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      padding-left: 220px;
+      padding-right: 15px;
+      text-align: center;
+      font-style: normal;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+      font-size: 55px;
+    }
+
+    p1 {
+      font-size: 25px;
+    }
+
+    /* unvisited link */
+    a:link {
+      color: white;
+    }
+
+    /* visited link */
+    a:visited {
+      color: #dccfcf;
+    }
+
+    /* mouse over link */
+    a:hover {
+      color: hotpink;
+    }
+  </style>
+
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
       <a class="navbar-brand" href="#">Actors</a>
       <button
         class="navbar-toggler"
@@ -23,71 +65,44 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">
-            Home
-            <span class="sr-only">(current)</span>
-          </a>
-          <a class="nav-item nav-link" href="#">Add Actor</a>
+    </nav>
+    <br />
+    <br />
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputFirstName">First name</label>
+          <input type="firstName" class="form-control" id="inputFirstName" placeholder="First name" />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputLastName">Last name</label>
+          <input type="lastName" class="form-control" id="inputLastName" placeholder="Last name" />
         </div>
       </div>
-    </nav>
+      <div class="form-group col-md-12">
+        <label for="knownFor">Movies for which they are known</label>
+        <input type="text" class="form-control" id="knownFor" placeholder="Titanic, Gone With The Wind, THX1138..." />
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity" />
+        </div>
 
-    <div class="container">
-      <form>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Name:</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" />
-          <label for="exampleFormControlInput1">Known for:</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" />
+        <div class="form-group col-md-6">
+          <label for="inputAge">Age</label>
+          <input type="text" class="form-control" id="inputAge" />
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Age</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>Select Age</option>
-            <option>25</option>
-            <option>26</option>
-            <option>27</option>
-            <option>28</option>
-            <option>29</option>
-            <option>30</option>
-            <option>31</option>
-            <option>32</option>
-            <option>33</option>
-            <option>34</option>
-            <option>35</option>
-            <option>36</option>
-            <option>37</option>
-            <option>38</option>
-            <option>39</option>
-            <option>40</option>
-          </select>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" />
+          <label class="form-check-label" for="gridCheck">
+            Confirm
+          </label>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Bio</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <div>
-          <input type="submit" value="Add Actor" />
-        </div>
-      </form>
-    </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+      </div>
+      <button type="submit" class="btn btn-info">Add Actor</button>
+    </form>
   </body>
 </html>
